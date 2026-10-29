@@ -6,8 +6,8 @@ it every night; nothing here is typed by hand, and nothing is ever removed.
 
 ## The file
 
-`calls.jsonl` — one JSON object per line, append-only, in the order the lines were written. The ledger holds 6 lines:
-6 calls and 0 resolutions, the first call made on 2026-10-03.
+`calls.jsonl` — one JSON object per line, append-only, in the order the lines were written. The ledger holds 9 lines:
+6 calls and 3 resolutions, the first call made on 2026-10-03.
 
 **A call line** (`status` `pending`), written the night the site first showed the call:
 
