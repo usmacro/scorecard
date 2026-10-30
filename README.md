@@ -49,7 +49,7 @@ keys sorted, no spaces) must equal its `h`.
 
 ## Independent archive
 
-Not yet archived independently: the first Wayback Machine capture follows the first push.
+The Wayback Machine holds a capture of the ledger taken 2026-10-30 — https://web.archive.org/web/20261030054416/https://raw.githubusercontent.com/usmacro/scorecard/main/calls.jsonl — and of that night's hash file — https://web.archive.org/web/20261030054434/https://raw.githubusercontent.com/usmacro/scorecard/main/hashes/2027-01-05.txt. The site asks for both after each night's push; the capture is the Internet Archive's own copy, outside this repository and the site.
 
 ## The grading rules
 
