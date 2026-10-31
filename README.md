@@ -6,13 +6,13 @@ it every night; nothing here is typed by hand, and nothing is ever removed.
 
 ## The file
 
-`calls.jsonl` — one JSON object per line, append-only, in the order the lines were written. The ledger holds 11 lines:
-11 calls and 0 resolutions, the first call made on 2026-09-19.
+`calls.jsonl` — one JSON object per line, append-only, in the order the lines were written. The ledger holds 22 lines:
+19 calls and 3 resolutions, the first call made on 2026-09-19.
 
 **A call line** (`status` `pending`), written the night the site first showed the call:
 
 ```
-{"basis":"capture","composite":"momentum","data_month":"2026-10","evidence":"https://usmacro.com/state-of-the-economy?date=2026-10-15","first_published":"2026-10-15","from":"stable","h":"4dd5ae4945d3c0cebb039355d6095bf8eb535518b60b2089b1f48f152caea771","id":"trajectory-momentum-2026-10","made_on":"2026-10-15","page":"/state-of-the-economy/methodology","reading":"stable, score 58.48","rule":"The outcome is the same rule applied to months m → m+3 on today's revised data: the score change, against the engine's own band. Held: the same state. Opposite: improving against deteriorating. Moved: any other change.","status":"pending","subject":"Momentum","to":"stable","type":"trajectory","window":"when the composite's month m+3 is on the revised record","window_end":"2027-01"}
+{"basis":"capture","composite":"forward_stress","data_month":"2026-10","evidence":"https://usmacro.com/state-of-the-economy?date=2026-10-31","first_published":"2026-10-31","from":"neutral","from_rung":2,"h":"db553d6130695540fd1041ac3e80e6f2a4cc853e98669ee46e1d5501900d90ff","id":"band-forward_stress-2026-10-31","live_score":"60.1","made_on":"2026-10-31","page":"/state-of-the-economy/methodology#band-crossing","reading":"live score 60.1 at the 15:20 UTC capture","rule":"A band crossing is a call the day the live reading first shows it. It held if the next month to settle after the crossing reads in the new band or beyond it in the same direction; it did not hold otherwise. The window ends when that month settles.","settles":"2026-10","status":"pending","subject":"Forward Stress","to":"healthy","to_rung":1,"type":"gauge_band","window":"on that month's settle date, the day its month-end score is written to the record, never restated after","window_end":"2026-11-05"}
 ```
 
 - `id` — the call's key; a resolution carries the same `id`.
