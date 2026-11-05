@@ -6,13 +6,13 @@ it every night; nothing here is typed by hand, and nothing is ever removed.
 
 ## The file
 
-`calls.jsonl` — one JSON object per line, append-only, in the order the lines were written. The ledger holds 27 lines:
-20 calls, 3 resolutions and 4 corrections, the first call made on 2026-09-19.
+`calls.jsonl` — one JSON object per line, append-only, in the order the lines were written. The ledger holds 37 lines:
+24 calls, 9 resolutions and 4 corrections, the first call made on 2026-09-19.
 
 **A call line** (`status` `pending`), written the night the site first showed the call:
 
 ```
-{"basis":"capture","composite":"forward_stress","data_month":"2026-11","evidence":"https://usmacro.com/state-of-the-economy?date=2026-11-03","first_published":"2026-11-03","from":"healthy","from_rung":1,"h":"b6ee5c22472a2358f0c61b1b411a88b2badf3e22506f67cff80ed14d5ac3a6dd","id":"band-forward_stress-2026-11-03","live_score":"55.56","made_on":"2026-11-03","page":"/state-of-the-economy/methodology#band-crossing","reading":"live score 55.56 at the 15:20 UTC capture","rule":"A band crossing is a call the day the live reading first shows it. It held if the next month to settle after the crossing reads in the new band or beyond it in the same direction; it did not hold otherwise. The window ends when that month settles.","settles":"2026-10","status":"pending","subject":"Forward Stress","to":"neutral","to_rung":2,"type":"gauge_band","window":"on that month's settle date, the day its month-end score is written to the record, never restated after","window_end":"2026-11-05"}
+{"basis":"settled","composite":"inflation_regime","data_month":"2026-10","evidence":"https://usmacro.com/state-of-the-economy?date=2026-11-05","first_published":"2026-11-05","from":null,"h":"f88605352a0140ef221f2c6c6e518bc3168a1b239aa45aba9a3faf7fc8e3f6d5","horizon":3,"id":"trajectory-inflation_regime-2026-10-settled","made_on":"2026-11-05","page":"/state-of-the-economy/methodology#trajectory-calls","reading":"Oct 2026 settled at 30.2, -2.9 from Jul 2026's 33.1","rule":"A trajectory call is the state a gauge card shows when a month settles, with its horizon. It held if, when the month that many months later settles, the score as first published moved the called way by at least the card's own threshold (for Stable, stayed within it).","score":30.15625,"settles":"2027-01","state":"stable","status":"pending","subject":"Inflation Regime","threshold":5.0,"to":"stable · 3 mo","type":"trajectory","window":"on the settle date of the month that many months later, when its score as first published is written to the record","window_end":"2027-02-05"}
 ```
 
 - `id` — the call's key; a resolution carries the same `id`.
