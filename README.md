@@ -54,7 +54,7 @@ keys sorted, no spaces) must equal its `h`.
 
 ## Independent archive
 
-The Wayback Machine holds a capture of the ledger taken 2026-11-09 — https://web.archive.org/web/20261109235510/https://raw.githubusercontent.com/usmacro/scorecard/main/calls.jsonl — and of that night's hash file — https://web.archive.org/web/20261112235514/https://raw.githubusercontent.com/usmacro/scorecard/main/hashes/2026-11-12.txt. The site asks for both after each night's push; the capture is the Internet Archive's own copy, outside this repository and the site.
+The Wayback Machine holds a capture of the ledger taken 2026-11-12 — https://web.archive.org/web/20261112235507/https://raw.githubusercontent.com/usmacro/scorecard/main/calls.jsonl — and of that night's hash file — https://web.archive.org/web/20261113235514/https://raw.githubusercontent.com/usmacro/scorecard/main/hashes/2026-11-13.txt. The site asks for both after each night's push; the capture is the Internet Archive's own copy, outside this repository and the site.
 
 ## Incident
 
