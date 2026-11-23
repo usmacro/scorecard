@@ -1,8 +1,9 @@
 # USMacro scorecard — the ledger
 
-This repository is the public archive of [usmacro.com/scorecard](https://usmacro.com/scorecard): every forward call the
-site has published, dated the day it first appeared, and how each one was graded when its window ended. The site writes
-it every night; nothing here is typed by hand, and nothing is ever removed.
+This repository is the public archive of [usmacro.com/scorecard](https://usmacro.com/scorecard): the forward calls the
+site has published since its scorecard began, each dated the first day the site can show it was served, and how each
+one was graded when its window ended. The site writes it every night; nothing here is typed by hand, and nothing is
+ever removed.
 
 ## The file
 
@@ -16,13 +17,17 @@ it every night; nothing here is typed by hand, and nothing is ever removed.
 ```
 
 - `id` — the call's key; a resolution carries the same `id`.
-- `made_on` / `first_published` — the day the site first showed the call (never earlier; `basis` says `capture` when
-  a stored capture of the live site shows it, `record` when it is read from the site's stored point-in-time record).
+- `made_on` / `first_published` — the first day the site can show the call was served (never earlier; `basis` says
+  `capture` when a stored capture of the live site shows it, `settled` when the night step made it as a month settled,
+  `record` when it was read from the site's stored point-in-time record, whose readings were computed later and whose
+  first display was not recorded).
 - `type`, `subject`, `from`, `to`, `reading`, `data_month` — what the call is.
 - `rule` — the sentence that grades it, the engine's own, fixed on the line the day the call is made; `window` and
   `window_end` say when.
 - `evidence` — the site's page where the call can be seen: as it stood that day where the page reads a date (the
   address ends `?date=` and the day), as it is today where the page has no dated view.
+- `engine`, `commit` — the engine version and the site's code commit that made the call, on the lines written since
+  these two fields were added; earlier lines do not carry them, and no line is rewritten.
 - `h` — the line's hash: sha256 over the previous line's `h` and this line without `h`.
 
 **A resolution line** (`status` `resolved`) carries the same `id`, `resolved_on`, `outcome` (`held` or
